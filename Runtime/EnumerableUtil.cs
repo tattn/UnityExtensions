@@ -23,6 +23,11 @@ namespace UniExt
         {
             return source.OrderBy(x => Guid.NewGuid());
         }
+
+		public static HashSet<T> ToHashSet<T>(this IEnumerable<T> source)
+		{
+			return new HashSet<T>(source);
+		}
     }
 }
 
